@@ -1,0 +1,26 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+-   repo: 'https://github.com/pre-commit/mirrors-isort'
+    rev: v5.10.1
+    hooks:
+      - id: isort
+        args: ["--profile", "black", "--filter-files"]
+-   repo: https://github.com/psf/black
+    rev: 24.2.0
+    hooks:
+    - id: black
+-   repo: https://github.com/terrencepreilly/darglint
+    rev: v1.8.1
+    hooks:
+    - id: darglint
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.4.0
+    hooks:
+    # -   id: trailing-whitespace
+    # -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-added-large-files
+        exclude: weights/
+    -   id: flake8
+        args: ['--ignore=E402,E501,W503,E203,F401,W605,C901,E731']

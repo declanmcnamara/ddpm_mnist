@@ -1,0 +1,7 @@
+.venv
+MNIST
+.vscode
+lightning_logs
+outputs
+__pycache__
+*/**/.ipynb_checkpoints

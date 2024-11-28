@@ -1,0 +1,17 @@
+seed: 784953
+
+training:
+  batch_size: 64
+  lr: 1e-4
+  gpu_num: 7
+
+forward_process:
+  beta_min: 1e-5
+  beta_max: 1e-1
+  T: 1000
+
+logging:
+  log_dir: logging
+
+
+
